@@ -1,6 +1,6 @@
 # nuxtjs-input
 
-nuxtjs 勉強用 repo
+nuxtjs 勉強用 リポジトリ
 
 ## command
 
