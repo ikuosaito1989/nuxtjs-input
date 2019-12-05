@@ -35,3 +35,12 @@ To test:
 - Vue.js devtools
 
 →Redux DevTools chrome extension と同等
+
+## dirctory
+
+- middleware
+  Angular で言う guard、resolve にあたるもの？もう少し広義かもしれない
+
+## reference
+
+https://ja.nuxtjs.org/guide/
