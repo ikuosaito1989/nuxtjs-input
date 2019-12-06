@@ -1,6 +1,6 @@
 # myApp
 
-> input
+> My posh Nuxt.js project
 
 ## Build Setup
 
