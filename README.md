@@ -41,6 +41,11 @@ To test:
 - middleware
   Angular で言う guard、resolve にあたるもの？もう少し広義かもしれない
 
+# lifecycle
+
+ref. https://ja.nuxtjs.org/api/pages-head/
+ref. https://qiita.com/chan_kaku/items/7f3233053b0e209ef355
+
 ## reference
 
 https://ja.nuxtjs.org/guide/
