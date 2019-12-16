@@ -2,4 +2,8 @@
   <div>this user Pages</div>
 </template>
 
-<script></script>
+<script>
+export default {
+  layout: 'non'
+}
+</script>
