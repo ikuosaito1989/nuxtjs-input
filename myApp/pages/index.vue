@@ -8,7 +8,9 @@
       <h2 class="subtitle">
         My posh Nuxt.js project
       </h2>
-      <nuxt-link to="/user">go to user</nuxt-link>
+      <transition>
+        <nuxt-link to="/user">go to user</nuxt-link>
+      </transition>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
