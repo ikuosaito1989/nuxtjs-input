@@ -13,6 +13,10 @@ export default {
   }),
   created() {
     this.id = this.$route.params.id
+  },
+  validate({ params }) {
+    // 数値でなければならない
+    return /^\d+$/.test(params.id)
   }
 }
 </script>
