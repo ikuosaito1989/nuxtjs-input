@@ -46,6 +46,12 @@ To test:
 ref. https://ja.nuxtjs.org/api/pages-head/
 ref. https://qiita.com/chan_kaku/items/7f3233053b0e209ef355
 
+# 覚えておいた方がよいやーつ
+
+>Vue インスタンスの ライフサイクル において、beforeCreate と created フックのみが クライアントサイドとサーバーサイドの両方 で呼び出されることに注意
+>してください。それ以外のすべてのフックはクライアントサイドでのみ呼び出されます。
+
 ## reference
 
 https://ja.nuxtjs.org/guide/
+
