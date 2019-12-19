@@ -12,10 +12,17 @@ export default {
     youtubeId: 0,
     item: null
   }),
-  async asyncData({ params, app }) {
-    const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${params.id}&key=AIzaSyBPmbOgEbbGjUCaI3W6q3LYv2zRDf7JtpM`
-    const response = await app.$axios.$get(url)
-    return { item: response.items[0] }
+  asyncData({ params, app, error }) {
+    const output404 = '111'
+    const url = `https://www.googleapis.com/youtube${output404}/v3/videos?part=snippet&id=${params.id}&key=AIzaSyBPmbOgEbbGjUCaI3W6q3LYv2zRDf7JtpM`
+    return app.$axios
+      .$get(url)
+      .then((response) => {
+        return { item: response.items[0] }
+      })
+      .catch((e) => {
+        error({ statusCode: 404, message: 'ページが見つかりません' })
+      })
   },
   created() {
     this.youtubeId = this.$route.params.id
