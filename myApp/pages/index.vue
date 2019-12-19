@@ -9,8 +9,8 @@
         My posh Nuxt.js project
       </h2>
       <transition>
-        <nuxt-link to="/user">
-          go to user
+        <nuxt-link to="/my-favorite">
+          my favorite songs
         </nuxt-link>
       </transition>
       <div class="links">
