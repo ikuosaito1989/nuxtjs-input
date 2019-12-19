@@ -9,7 +9,9 @@
         My posh Nuxt.js project
       </h2>
       <transition>
-        <nuxt-link to="/user">go to user</nuxt-link>
+        <nuxt-link to="/user">
+          go to user
+        </nuxt-link>
       </transition>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
