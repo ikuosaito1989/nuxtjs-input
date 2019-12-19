@@ -1,22 +1,28 @@
 <template>
   <div>
-    <div>this user Pages</div>
-    <span>Message: {{ id }}</span>
-    <div>pram id</div>
+    <div>YoutubeId: {{ youtubeId }}</div>
+    <div>Title: {{ item.snippet.title }}</div>
+    <img :src="item.snippet.thumbnails.standard.url" />
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    id: 0
+    youtubeId: 0,
+    item: null
   }),
-  created() {
-    this.id = this.$route.params.id
+  async asyncData({ params, app }) {
+    const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${params.id}&key=AIzaSyBPmbOgEbbGjUCaI3W6q3LYv2zRDf7JtpM`
+    const response = await app.$axios.$get(url)
+    return { item: response.items[0] }
   },
-  validate({ params }) {
-    // 数値でなければならない
-    return /^\d+$/.test(params.id)
+  created() {
+    this.youtubeId = this.$route.params.id
   }
+  // validate({ params }) {
+  //   // 数値でなければならない
+  //   return /^\d+$/.test(params.id)
+  // }
 }
 </script>
