@@ -14,6 +14,8 @@
         </nuxt-link>
       </transition>
       <a @click="openNotification">open</a>
+      <button @click="increment">increment</button>
+      <div>{{ counter }}</div>
       <notifications group="foo" />
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
@@ -39,6 +41,11 @@ export default {
   components: {
     Logo
   },
+  computed: {
+    counter() {
+      return this.$store.getters.counter
+    }
+  },
   methods: {
     openNotification() {
       this.$notify({
@@ -48,6 +55,9 @@ export default {
         group: 'foo',
         type: 'error'
       })
+    },
+    increment() {
+      this.$store.dispatch('set', 5)
     }
   }
 }
