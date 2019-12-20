@@ -13,6 +13,8 @@
           my favorite songs
         </nuxt-link>
       </transition>
+      <a @click="openNotification">open</a>
+      <notifications group="foo" />
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
@@ -36,6 +38,17 @@ export default {
   layout: 'default',
   components: {
     Logo
+  },
+  methods: {
+    openNotification() {
+      this.$notify({
+        title: 'メッセージです。',
+        text: 'click to ',
+        duration: 100,
+        group: 'foo',
+        type: 'error'
+      })
+    }
   }
 }
 </script>
